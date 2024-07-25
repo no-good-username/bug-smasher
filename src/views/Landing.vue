@@ -46,4 +46,12 @@ h1 {
   padding: 1rem 2rem;
   border-radius: 10px;
 }
+
+@media (max-width: 768px) {
+
+  h1{
+    font-size: 4rem;
+  }
+}
+
 </style>
