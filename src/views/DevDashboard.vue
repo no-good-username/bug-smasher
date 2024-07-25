@@ -4,10 +4,15 @@
       <h1>Developer Dashboard</h1>
   
       <div class="main">
-        <div class="remaining top-left">
+        <div class="bttonList">
+        <h2>Navigate to:</h2>
+      <a v-ripple class="btton" href="#remaining">Remaining</a>
+      <a v-ripple class="btton" href="#completed">Completed</a>
+    </div>
+        <div id="remaining" class="remaining top-left">
           <RemainingBugsList :markCompleted="markBugCompleted" />
         </div>
-        <div class="completed top-right">
+        <div id="completed" class="completed top-right">
           <CompletedBugsList />
         </div>
       </div>
@@ -68,12 +73,60 @@
     background-color: rgba(200, 172, 214, 0.75);
     border-radius: 10px;
   }
+  .bttnList {
+  display: none;
+}
+
+.btton{display: none;}
+
+h2{
+  display: none;
+}
 
   @media (max-width: 768px){
   .main {
   display: flex;
   flex-direction: column;
 }
+h2{
+    display: inline;
+    color: white;
+    font-size: xx-large;
+  }
+
+  .bttonList {
+    display:flex;
+    height: 150%;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(200, 172, 214, 0.75);
+
+    padding: 12%;
+    border-radius: 10px;
+  }
+
+  .btton {
+  display: inline;
+  margin: 10px;
+  text-decoration: none ;
+  border: none;
+  outline: none;
+  background-color: rgba(67, 61, 139, 0.55);
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #fff;
+  border-radius: 5px;
+  transition: all ease 0.1s;
+  box-shadow: 0px 5px 0px 0px rgba(67, 61, 139, 0.75);
+}
+
+  .btton:active {
+    transform: translateY(5px);
+    box-shadow: 0px 0px 0px 0px rgba(67, 61, 139, 0.75);
+  }
+
 }
   </style>
   
