@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import LoginPage from '../components/LoginPage.vue';
+import Landing from '../views/Landing.vue';
 import AdminDashboard from '../views/AdminDashboard.vue';
 import TesterDashboard from '../views/TesterDashboard.vue'
 import DevDashboard from '../views/DevDashboard.vue'
@@ -7,6 +8,11 @@ import DevDashboard from '../views/DevDashboard.vue'
 const routes = [
   {
     path: '/',
+    name: 'Landing',
+    component: Landing
+  },
+  {
+    path: '/login',
     name: 'Login',
     component: LoginPage
   },
